@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  user:
+    build: ./user-service
+    container_name: user_service
+    ports:
+      - "5001:5000"
+  content:
+    build: ./content-service
+    container_name: content_service
+    ports:
+      - "5002:5000"
+  notify:
+    build: ./notify-service
+    container_name: notify_service
+    ports:
+      - "5003:5000"
